@@ -1,0 +1,113 @@
+﻿@*@model IEnumerable<LogicaNegocio.Entidades.Mantenimiento>*@
+@model IEnumerable<Hotel.Web.Models.MantenimientoModel>
+
+@{
+    ViewData["Title"] = "Mantenimientos";
+}
+
+<h1>Mantenimientos</h1>
+<hr />
+<div>
+    <p class="fs-3">Filtrar por fechas</p>
+    @*<form asp-controller="Mantenimiento" asp-action="Index" method="get" asp-route-id="@ViewBag.Cabanha.Id" class="row mb-3 align-items-end" id="formValidarFechas">*@
+    <form asp-controller="Mantenimiento" asp-action="Index" asp-route-idCabanha="@TempData["idCabanha"]" class="row mb-3 align-items-end" id="formValidarFechas">
+
+    <div class="form-group col-5">
+    <label class="control-label">Fecha Desde</label>
+    <input type="date" name="fecha1" id="fch1" class="form-control" />
+    </div>
+    <div class="form-group col-5">
+    <label class="control-label">Fecha Hasta</label>
+    <input type="date" name="fecha2" id="fch2" class="form-control" />
+    </div>
+    <div class="col-2">
+    <input type="submit" value="Filtrar" class="btn btn-primary me-3" />
+    </div>
+    <span id="errorFiltro" class="text-danger"></span>
+    </form>
+    </div>
+    <div class="col">
+    <form asp-controller="Mantenimiento" asp-action="Index" asp-route-idCabanha="@TempData["idCabanha"]" class="row mb-3 align-items-end">
+    <div class="col-5">
+    <button type="submit" name="reset" class="btn btn-primary me-3">Ver todos</button>
+    </div>
+    </form>
+</div>
+<hr />
+@if (Model != null)
+{
+    <table class="table table-striped ">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Fecha)
+                </th>
+                <th>
+                    Descripción
+                </th>
+                <th>
+                    Costo
+                </th>
+                <th>
+                    Realizado por
+                </th>
+                @*                <th>
+            Nombre Cabaña
+            </th>*@
+                <th>
+                    Id cabaña
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Id)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Fecha)
+                    </td>
+                    <td style="width: 350px;">
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td>
+                        $ @Html.DisplayFor(modelItem => item.CostoMantenimiento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.RealizadoPor)
+                    </td>
+                    @*                    <td>
+            @Html.DisplayFor(modelItem => item.Cabanha.Nombre)
+            </td>*@
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdCabanha)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+                        @Html.ActionLink("Eliminar", "Delete", new {  id=item.Id })
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="mt-3">
+        <p class="m-0 fw-bold alert alert-warning">@ViewBag.Error</p>
+    </div>
+    <p>@ViewBag.ListaVacia</p>
+}
+
+
+<p>
+    @*<a asp-controller="Cabanha" asp-action="Details" asp-route-id="@ViewBag.Cabanha.Id">Volver a la cabaña</a>*@
+    <a asp-controller="Cabanha" asp-action="Details" asp-route-idCabanha="@TempData["idCabanha"]">Volver a la cabaña</a>
+</p>
+<script src="~/js/btnFiltrarFecha.js"></script>

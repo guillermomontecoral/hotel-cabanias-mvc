@@ -1,0 +1,88 @@
+﻿@*@model LogicaNegocio.Entidades.Cabanha*@
+@model Hotel.Web.Models.CabanhaViewModel
+
+@{
+    ViewData["Title"] = $"Eliminar cabaña {Model.Nombre}";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Cabanha</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class = "col-sm-4">
+            Tipo
+        </dt>
+        <dd class = "col-sm-8">
+            @ViewBag.TipoCabanha.Nombre
+        </dd>
+        <dt class = "col-sm-4">
+            Descripción
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class = "col-sm-4">
+            @Html.DisplayNameFor(model => model.Jacuzzi)
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.Jacuzzi)
+        </dd>
+        <dt class = "col-sm-4">
+            Habilitada para reservas
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.HabilitadaParaReservas)
+        </dd>
+        <dt class = "col-sm-4">
+            Número habitación
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.NumHabitacion)
+        </dd>
+        <dt class = "col-sm-4">
+            Cantidad de personas
+        </dt>
+        <dd class = "col-sm-8">
+            @Html.DisplayFor(model => model.CantMaxPersonas)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Eliminar
+        </button>
+        <a asp-action="Details" asp-route-id="@Model.Id">Vovler</a>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Eliminar @Model.Nombre?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-outline-danger">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

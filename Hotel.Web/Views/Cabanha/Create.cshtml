@@ -1,0 +1,84 @@
+﻿@model Hotel.Web.Models.CabanhaViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Agregar nueva Cabaña</h1>
+
+<hr />
+
+<div class="mt-5">
+    <form asp-action="Create" enctype="multipart/form-data" method="post" class="row gy-3 gx-5">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group mb-3 col-md-6">
+            <label asp-for="Nombre" class="control-label"></label>
+            <input asp-for="Nombre" class="form-control" />
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label>Seleccione el tipo de cabaña</label>
+            <select asp-for="IdTipoCabanha" asp-items="@(new SelectList(ViewBag.TipoCabanhas,"Id","Nombre"))" class="form-select">
+                <option value="-1" disabled selected>Seleccionar...</option>
+            </select>
+            <span asp-validation-for="IdTipoCabanha" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label for="imagen" class="control-label"></label>
+            <input type="file" name="imagen" class="form-control" />
+            <span asp-validation="imagen" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label class="control-label">Capacidad</label>
+            <input asp-for="CantMaxPersonas" class="form-control" />
+            <span asp-validation-for="CantMaxPersonas" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label class="control-label">Descripción</label>
+            <textarea asp-for="Descripcion" class="form-control"></textarea>
+            <span asp-validation-for="Descripcion" class="text-danger"></span>
+        </div>
+        <div class="form-group col-md-6">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="jacuzzi" asp-for="Jacuzzi" />
+                <label class="form-check-label" for="jacuzzi">Tiene Jacuzzi</label>
+            </div>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <div class="form-check form-switch">
+                <input class="form-check-input" type="checkbox" id="habilitadaParaReservas" asp-for="HabilitadaParaReservas" />
+                <label class="form-check-label" for="habilitadaParaReservas">Habilitada para reservas</label>
+            </div>
+        </div>
+        <div class="row align-items-center">
+
+            <div class="form-group col-1 me-5">
+                <input type="submit" value="Agregar" class="btn btn-primary" />
+            </div>
+            <div class="mt-3 col">
+                <a asp-action="Index">Volver al listado</a>
+            </div>
+        </div>
+
+    </form>
+</div>
+
+@if (@ViewBag.Error != null)
+{
+    <div class="mt-3">
+        <p class="text-danger">@ViewBag.Error</p>
+    </div>
+}
+
+@if (@ViewBag.ErrorTope != null)
+{
+    <div class="mt-3">
+        <p class="text-danger">@ViewBag.ErrorTope Puede hacer <a asp-controller="TopesDescripcion" asp-action="Create">click aquí</a> para hacerle el registro.</p>
+    </div>
+}
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

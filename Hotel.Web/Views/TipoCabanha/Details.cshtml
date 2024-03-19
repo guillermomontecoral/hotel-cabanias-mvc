@@ -1,0 +1,42 @@
+﻿@*@model LogicaNegocio.Entidades.TipoCabanha*@
+@model Hotel.Web.Models.TipoCabanhaModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Detalles del tipo de cabaña <span class="text-nom-tipo">@Model.Nombre</span></h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-4">
+            Descripción
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class="col-sm-4">
+            Costo por Huesped
+        </dt>
+        <dd class="col-sm-8">
+            $ @Html.DisplayFor(model => model.CostoPorHuesped)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id}) |
+    <a asp-action="Index">Vovler al listado</a>
+</div>

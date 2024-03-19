@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row justify-content-center align-items-center  div-login">
+
+    @if (Context.Session.GetString("token") == null)
+    {
+        <div class="text-center mb-3">
+            <h1 class="display-4 fw-bold">Iniciar Sesión</h1>
+        </div>
+        <div class="col-md-4">
+            <form asp-action="Index" id="formLogin">
+                <div class="form-group mb-3">
+                    <label name="email" class="control-label mb-1">Correo Electrónico</label>
+                    <input name="email" type="email" class="form-control" id="txtemail" placeholder="Ingrese su correo electrónico" />
+                </div>
+                <div class="form-group mb-3">
+                    <label name="clave" class="control-label mb-1">Contraseña</label>
+                    <input type="password" name="clave" class="form-control" id="txtPassword" placeholder="Ingrese su contraseña" />
+                </div>
+                <div class="form-group mb-3 d-grid gap-2 d-md-flex justify-content-md-end">
+                    <input type="submit" value="Iniciar Sesión" class="btn btn-primary" />
+                </div>
+                <p class="text-danger text-center">@ViewBag.msg</p>
+                <p class="text-danger text-center rounded">@ViewBag.LlenarCampos</p>
+            </form>
+        </div>
+    }
+
+
+    @if (Context.Session.GetString("token") != null)
+    {
+        <div class="text-center mb-3">
+            <h1 class="display-4 fw-bold">Bienvenido</h1>
+            <p class="fs-4 p-4 text-lowercase">@ViewBag.Email</p>
+        </div>
+    }
+</div>
+
+@if (@TempData["ErrorUsuarios"] != null){
+    <p class="m-0 fw-bold alert alert-danger">@TempData["ErrorUsuarios"]</p>
+}

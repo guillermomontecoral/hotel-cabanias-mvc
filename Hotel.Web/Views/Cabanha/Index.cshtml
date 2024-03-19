@@ -1,0 +1,129 @@
+﻿@*@model IEnumerable<LogicaNegocio.Entidades.Cabanha>*@
+@model IEnumerable<Hotel.Web.Models.CabanhaViewModel>
+
+@{
+    ViewData["Title"] = "Cabañas";
+}
+
+<h1>Cabañas</h1>
+<hr />
+<p>
+    <a asp-action="Create">Agregar nueva cabaña</a>
+</p>
+<div class="row align-items-end">
+    @*Filtrado por texto en nombre*@
+    <div class="col-6">
+        <form asp-controller="Cabanha" asp-action="Index" method="get" class="row mb-3 align-items-end" id="formBuscarTexto">
+
+            <div class="form-group col-6">
+                <label>Buscar cabaña</label>
+                <input name="buscarTexto" type="text" id="txtBuscarTexto" class="form-control" placeholder="Buscar cabaña">
+            </div>
+            <div class="col-6">
+                <input type="submit" class="btn btn-primary me-3" value="Buscar" />
+            </div>
+            <span id="errorBuscarTexto" class="text-danger"></span>
+        </form>
+    </div>
+
+    @*Filtrado por tipo de cabaña*@
+    <div class="col-6">
+        <form asp-controller="Cabanha" asp-action="Index" method="get"class="row mb-3 align-items-end" id="formBuscarTipo">
+            <div class="form-group col-6">
+                <label>Filtrar por tipo de cabaña</label>
+                <select name="tipoCabanha" id="slcTipoCabanha" asp-items="@(new SelectList(ViewBag.TipoCabanhas,"Id","Nombre"))" class="form-select">
+                    <option value="-1" disabled selected>Seleccionar...</option>
+                </select>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary me-3">Filtrar</button>
+            </div>
+            <span id="errorSlcTipoCab" class="text-danger"></span>
+
+        </form>
+    </div>
+
+    @*Filtrado por cantidad de personas*@
+    <div class="col-6">
+        <form asp-controller="Cabanha" asp-action="Index" method="get"class="row mb-3 align-items-end" id="formBuscarCant">
+            <div class="form-group  col-6">
+                <label>Filtrar por cantidad de personas</label>
+                <input type="number" name="numMaxPersonas" id="numbCantCabanha" class="form-control" placeholder=" Cantidad de personas" aria-label="Recipient's username" />
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary me-3">Buscar</button>
+            </div>
+            <span id="errorNumCant" class="text-danger"></span>
+
+        </form>
+    </div>
+
+    @*Filtrado por cabañas habilitadas*@
+    <div class="col-6">
+        <form asp-controller="Cabanha" asp-action="Index" method="get" class="row mb-3 align-items-end" id="formBuscarHab">
+            <div class="form-group col-6">
+                <div class="form-check form-switch">
+                    <input type="checkbox" name="cabHabilitada" id="checkCabHab" class="form-check-input" value="true" />
+                    <label class="form-check-label" for="checkCabHab">Habilitada para reservas</label>
+                </div>
+            </div>
+            <div class="col-6">
+                <button type="submit" class="btn btn-primary me-3">Filtrar</button>
+            </div>
+            <span id="errorHab" class="text-danger"></span>
+
+        </form>
+    </div>
+    <div class="col">
+        <form asp-controller="Cabanha" asp-action="Index" method="get" class="row mb-3 align-items-end">
+            <div class="col-5">
+                <button type="submit" name="reset" class="btn btn-primary me-3">Ver todos</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<hr />
+@if (Model != null)
+{
+    <div class="row g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col-sm-4">
+                <div class="card">
+                    @*@foreach (var f in item.MisFotos)*@
+                    @*{*@
+                        <img class="card-img-top" src="~/img/fotos/@item.NombreFoto" />
+                 @*   }*@
+                    <div class="card-body">
+                        <h4 class="card-title">@Html.DisplayFor(modelItem => item.Nombre)</h4>
+                        <h5>@Html.DisplayFor(modelItem => item.IdTipoCabanha) Como mostrar el nombre del tipo de cabaña</h5>
+                        @*<h5>@Html.DisplayFor(modelItem => item.TipoCabanha.Nombre)</h5>*@
+                        <p class="card-text truncate">@Html.DisplayFor(modelItem => item.Descripcion)</p>
+                        <a asp-action="Details" class="btn btn-primary p-0 px-2" asp-route-id="@item.Id">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+}
+else 
+{
+    @if (@ViewBag.ListaVacia != null)
+    {
+        <div class="mt-3">
+            <p class="m-0 fw-bold alert alert-info">@ViewBag.ListaVacia</p>
+        </div>
+    }
+    
+    @if (@ViewBag.Error != null)
+    {
+        <div class="mt-3">
+            <p class="fw-bold text-danger">@ViewBag.Error</p>
+        </div>
+        
+    }
+}
+
+<script src="~/js/btnBusquedasCabanha.js"></script>

@@ -1,0 +1,48 @@
+﻿@*@model Hotel.LogicaNegocio.Entidades.TopesDescripcion
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Crear Topes de descripción</h1>
+
+<hr />
+<div class="mt-5">
+    <form asp-action="Create" class="row gy-3 gx-5">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group mb-3">
+            <label>Seleccione al objeto</label>
+            <select asp-for="NombreObj" class="form-select">
+                <option value="-1" disabled selected>Seleccionar...</option>
+                <option value="Cabanha">Cabaña</option>
+                <option value="TipoCabanha">Tipo Cabaña</option>
+                <option value="Mantenimiento">Mantenimiento</option>
+            </select>
+            <span asp-validation-for="NombreObj" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label asp-for="TopeMin" class="control-label">Tope mínimo</label>
+            <input type="number" asp-for="TopeMin" class="form-control" />
+            <span asp-validation-for="TopeMin" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label asp-for="TopeMax" class="control-label">Tope máximo</label>
+            <input type="number" asp-for="TopeMax" class="form-control" />
+            <span asp-validation-for="TopeMax" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Crear tope" class="btn btn-primary" />
+        </div>
+    </form>
+</div>
+
+<div>
+    <a asp-action="Index">Volver</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+*@

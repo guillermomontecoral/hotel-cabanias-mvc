@@ -1,0 +1,54 @@
+﻿@*@model IEnumerable<Hotel.LogicaNegocio.Entidades.TopesDescripcion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Topes de descripción</h1>
+
+@if(Model != null){
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                Nombre del objeto
+            </th>
+            <th>
+                Tope mínimo
+            </th>
+            <th>
+                Tope máximo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreObj)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TopeMin) Caracteres
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TopeMax) Caracteres
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id=item.Id})
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+}
+else{
+    <p>No hay topes registrados.</p>
+}*@

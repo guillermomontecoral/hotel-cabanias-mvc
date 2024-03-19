@@ -1,0 +1,121 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Hotel.Web
+build_property.RootNamespace = Hotel.Web
+build_property.ProjectDir = C:\Users\monte\OneDrive\ORT\03.2.TercerSemestre-Marzo2023\FI-ET Programación 3\Obligatorio\00_Parte 2 Obligatorio\EntregaP3 (7)\EntregaP3\OblHotel_MVC\Hotel.Web\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\monte\OneDrive\ORT\03.2.TercerSemestre-Marzo2023\FI-ET Programación 3\Obligatorio\00_Parte 2 Obligatorio\EntregaP3 (7)\EntregaP3\OblHotel_MVC\Hotel.Web
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Cabanha/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5oYVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Cabanha/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5oYVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Cabanha/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5oYVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Cabanha/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5oYVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Cabanha/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FiYW5oYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Mantenimiento/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Mantenimiento/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Mantenimiento/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Mantenimiento/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFudGVuaW1pZW50b1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TipoCabanha/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuaGFcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TipoCabanha/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuaGFcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TipoCabanha/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuaGFcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TipoCabanha/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuaGFcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TipoCabanha/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGlwb0NhYmFuaGFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TopesDescripcion/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9wZXNEZXNjcmlwY2lvblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TopesDescripcion/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9wZXNEZXNjcmlwY2lvblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/TopesDescripcion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9wZXNEZXNjcmlwY2lvblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Usuario/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Usuario/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/monte/OneDrive/ORT/03.2.TercerSemestre-Marzo2023/FI-ET Programación 3/Obligatorio/00_Parte 2 Obligatorio/EntregaP3 (7)/EntregaP3/OblHotel_MVC/Hotel.Web/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-t1x273ueqa

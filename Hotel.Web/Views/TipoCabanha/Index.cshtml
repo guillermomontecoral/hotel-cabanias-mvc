@@ -1,0 +1,83 @@
+﻿@*@model IEnumerable<LogicaNegocio.Entidades.TipoCabanha>*@
+@model IEnumerable<Hotel.Web.Models.TipoCabanhaModel>
+
+@{
+    ViewData["Title"] = "Tipos de Cabañas";
+}
+
+<h1 class="mb-5">Tipos de Cabañas</h1>
+
+<div class="row">
+    <form asp-controller="TipoCabanha" asp-action="Index" class="row mb-3 col-9">
+            <div class="col-5">
+                <input name="buscarNombre" type="text" class="form-control" placeholder="Buscar tipo de cabaña" aria-label="Recipient's username" aria-describedby="button-addon2">
+            </div>
+            <div class="col-5">
+            <button type="submit" class="btn btn-primary me-3" id="button-addon2">Buscar</button>
+            </div>
+    </form>
+    <p class="col-3 text-end">
+        <a asp-action="Create">Agregar nuevo tipo</a>
+    </p>
+</div>
+@if (Model != null)
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    Descripción
+                </th>
+                <th>
+                    Costo por Huesped
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="align-middle">
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td class="align-middle" width="680px">
+                        @Html.DisplayFor(modelItem => item.Descripcion)
+                    </td>
+                    <td class="align-middle">
+                        $ @Html.DisplayFor(modelItem => item.CostoPorHuesped)
+                    </td>
+                    <td class="text-end">
+                        <a asp-action="Edit" class="btn btn-primary p-0 px-2" asp-route-id="@item.Id">Editar</a>
+                        <a asp-action="Details" class="btn btn-primary p-0 px-2 mx-2" asp-route-id="@item.Id">Detalles</a>
+                        <a asp-action="Delete" class="btn btn-danger p-0 px-2" asp-route-id="@item.Id">Eliminar</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    @if (@ViewBag.Error != null)
+    {
+        <div class="mt-3">
+            <p class="fw-bold text-danger">@ViewBag.Error</p>
+        </div>
+    }
+    @if (@ViewBag.ListaVacia != null)
+    {
+        <div class="mt-3">
+            <p class="m-0 fw-bold alert alert-info">@ViewBag.ListaVacia</p>
+        </div>
+    }
+
+}
+
+
+
+

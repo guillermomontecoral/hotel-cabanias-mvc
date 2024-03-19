@@ -1,0 +1,184 @@
+﻿@*@model LogicaNegocio.Entidades.Mantenimiento*@
+@model Hotel.Web.Models.MantenimientoModel
+
+@{
+    ViewData["Title"] = "Crear mantenimiento";
+}
+
+<h1>Nuevo mantenimiento</h1>
+
+<hr />
+<h2>Datos de la cabaña</h2>
+<div class="row mb-5">
+    <div class="row g-4">
+        <div class="col-3">
+            <div class="p-3 rounded shadow-sm ">
+                <p class="fw-bold">
+                    Identificador
+                </p>
+                <p>
+                    @ViewBag.Cabanha.Id
+                </p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-3 rounded shadow-sm ">
+                <p class="fw-bold">
+                    Nombre
+                </p>
+                <p>
+                    @ViewBag.Cabanha.Nombre
+                </p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-3 rounded shadow-sm ">
+                <p class="fw-bold">
+                    Tipo de cabaña
+                </p>
+                <p>
+                    @*@ViewBag.Cabanha.TipoCabanha.Nombre*@
+                    MOSTRAR EL NOMBRE DEL TIPO DE CABAÑA
+                </p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-3  rounded shadow-sm ">
+                <p class="fw-bold">
+                    Número de habitación
+                </p>
+                <p>
+                    @ViewBag.Cabanha.NumHabitacion
+                </p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-3  rounded shadow-sm ">
+                <p class="fw-bold">
+                    Capacidad
+                </p>
+                <p>
+                    @ViewBag.Cabanha.CantMaxPersonas
+                </p>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-3  rounded shadow-sm ">
+                <p class="fw-bold">
+                    Jacuzzi
+                </p>
+                @if (@ViewBag.Cabanha.Jacuzzi)
+                {
+                    <p>
+                        Si cuenta con jacuzzi
+
+                    </p>
+                }
+                else
+                {
+                    <p>
+                        No cuenta con jacuzzi
+                    </p>
+                }
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-3  rounded shadow-sm ">
+                <p class="fw-bold">
+                    Habilitada
+                </p>
+                @if (@ViewBag.Cabanha.HabilitadaParaReservas)
+                {
+                    <p>
+                        Si está habilitada
+                    </p>
+                }
+                else
+                {
+                    <p>
+                        No está habilitada
+                    </p>
+                }
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="p-3 rounded shadow-sm ">
+                <p class="fw-bold">
+                    Costo por persona
+                </p>
+                <p>
+                    @*$ @ViewBag.Cabanha.TipoCabanha.CostoPorHuesped*@
+                    PONER EL COSTO POR HUESPED
+                </p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="p-3  rounded shadow-sm ">
+                <p class="fw-bold">
+                    Descripción
+                </p>
+                <p>
+                    @ViewBag.Cabanha.Descripcion
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<hr />
+<h3>Agregar mantenimiento</h3>
+<div class="col my-3">
+    <form asp-action="Create" class="row gy-3 gx-5">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group mb-3 col-md-6">
+            <label asp-for="IdCabanha" class="control-label">Identificador de la cabaña</label>
+            <input asp-for="IdCabanha" class="form-control" value="@ViewBag.Cabanha.Id" readonly />
+            <span asp-validation-for="IdCabanha" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label asp-for="Fecha" class="control-label"></label>
+            <input asp-for="Fecha" class="form-control mb-2" />
+            <span asp-validation-for="Fecha" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label asp-for="CostoMantenimiento" class="control-label">Costo mantenimiento</label>
+            <input type="number" asp-for="CostoMantenimiento" class="form-control mb-2" />
+            <span asp-validation-for="CostoMantenimiento" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col-md-6">
+            <label asp-for="RealizadoPor" class="control-label">Realizado por</label>
+            <input asp-for="RealizadoPor" class="form-control mb-2" />
+            <span asp-validation-for="RealizadoPor" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3 col">
+            <label asp-for="Descripcion" class="control-label">Descripción</label>
+            <textarea asp-for="Descripcion" class="form-control mb-2"></textarea>
+            <span asp-validation-for="Descripcion" class="text-danger"></span>
+        </div>
+
+        <div class="form-group col-12">
+            <input type="submit" value="Agregar" class="btn btn-primary" />
+        </div>
+        <div class="mt-3 col">
+            <a asp-controller="Cabanha" asp-action="Details" asp-route-id="@ViewBag.Cabanha.Id">Volver a la cabaña</a>
+        </div>
+    </form>
+</div>
+
+@if (@ViewBag.Error != null)
+{
+    <div class="mt-3">
+        <p class="text-danger">@ViewBag.Error</p>
+    </div>
+}
+
+@if (@ViewBag.ErrorTope != null)
+{
+    <div class="mt-3">
+        <p class="text-danger">@ViewBag.ErrorTope Puede hacer <a asp-controller="TopesDescripcion" asp-action="Create">click aquí</a> para hacerle el registro.</p>
+    </div>
+}
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

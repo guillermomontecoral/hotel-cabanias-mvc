@@ -1,0 +1,67 @@
+﻿@*@model LogicaNegocio.Entidades.TipoCabanha*@
+@model Hotel.Web.Models.TipoCabanhaModel
+
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1 class="mb-4">Eliminar el tipo de cabaña <span class="text-nom-tipo">@Model.Nombre</span></h1>
+
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Id)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class="col-sm-4">
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt class="col-sm-4">
+            Descripción
+        </dt>
+        <dd class="col-sm-8">
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+        <dt class="col-sm-4">
+            Costo por Huesped
+        </dt>
+        <dd class="col-sm-8">
+            $ @Html.DisplayFor(model => model.CostoPorHuesped)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-danger me-4" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+            Eliminar
+        </button>
+        <a asp-action="Index">Vovler al listado</a>
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">¿Eliminar @Model.Nombre?</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-outline-danger">Confirmar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="mt-3">
+    <p class="text-danger">@ViewBag.Error</p>
+</div>
